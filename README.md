@@ -1,4 +1,4 @@
-# My First Project
+# opencode-first-project
 
 This repository was created as part of the OpenCode School "use-git-and-github" exercise.
 
