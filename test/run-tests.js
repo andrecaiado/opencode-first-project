@@ -1,3 +1,5 @@
+// This test file remains JS but loads ts-node to execute TypeScript sources.
+require('ts-node').register({ transpileOnly: true });
 const assert = require('assert');
 const { add } = require('../src/index');
 
