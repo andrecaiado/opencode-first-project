@@ -1,4 +1,5 @@
 // This test file remains JS but loads ts-node to execute TypeScript sources.
+/* eslint-disable @typescript-eslint/no-var-requires */
 require('ts-node').register({ transpileOnly: true });
 const assert = require('assert');
 const { add } = require('../src/index');
