@@ -21,10 +21,11 @@ Repository high-signal notes for agents
 
 - CI order (mirror locally when verifying):
   1. `npm ci`
- 2. `npx prettier --check .`
- 3. `npm run lint`
- 4. `npm run build`
- 5. `npm test`
+
+2.  `npx prettier --check .`
+3.  `npm run lint`
+4.  `npm run build`
+5.  `npm test`
 
 - Project shape / gotchas
   - Single-package TypeScript library. Source in `src/`, tests in `test/`.
@@ -46,3 +47,4 @@ Keep this file minimal. If you need more context, read `package.json`, `tsconfig
 - Git / commits
   - Always use semantic commit messages (Conventional Commits style) when making git commits. Format: `type(scope?): short subject`.
   - Examples: `feat: add logging to payment flow`, `fix(auth): handle expired token`.
+  - A local `git commit` hook (husky + lint-staged) runs Prettier on staged files before every commit. If formatting fails, fix with `npx prettier --write .` then re-stage and commit. Bypass with `git commit --no-verify`.
